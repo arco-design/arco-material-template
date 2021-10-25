@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@arco-design/arco-scripts": "^1.8.1",
-    "@arco-design/arco-site-module-info-plugin": "^0.3.0",
     "@storybook/addon-actions": "^6.1.11",
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-links": "^6.1.11",

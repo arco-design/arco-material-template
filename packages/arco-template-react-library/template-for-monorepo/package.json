@@ -23,9 +23,7 @@
     "react": ">=16",
     "react-dom": "^16.0.1"
   },
-  "devDependencies": {
-    "@arco-design/arco-site-module-info-plugin": "^0.3.0"
-  },
+  "devDependencies": {},
   "sideEffects": [
     "dist/**/*",
     "{es,lib,components}/**/style/*",
