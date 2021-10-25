@@ -1,0 +1,74 @@
+{
+  "name": "@CONST_PACKAGE_NAME@",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./es/index.d.ts",
+  "scripts": {
+    "dev": "arco-scripts dev:component",
+    "build": "arco-scripts build:component",
+    "docgen": "arco-scripts docgen",
+    "test": "NODE_ENV=test arco-scripts test:client",
+    "add:util": "node ./scripts/addUtil.js",
+    "show:config": "arco-scripts show:config",
+    "eslint": "eslint tests/ src/ --fix --cache --quiet --ext .js,.ts",
+    "format": "prettier '{tests,src}/**/*.{js,ts}' --config .prettierrc --write",
+    "clean": "rm -rf es && rm -rf lib && rm -rf dist && rm -rf docs",
+    "prepublishOnly": "npm run clean && npm run build && npm run docgen"
+  },
+  "devDependencies": {
+    "@arco-design/arco-scripts": "^1.8.1",
+    "@types/jest": "^26.0.19",
+    "@types/shallowequal": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
+    "chalk": "^2.4.2",
+    "concurrently": "^5.3.0",
+    "cross-spawn": "^7.0.3",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-typescript": "^0.14.0",
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
+    "husky": "^4.3.6",
+    "jsdom": "^16.4.0",
+    "jsdom-global": "^3.0.2",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3",
+    "typescript-json-schema": "^0.45.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.5.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run eslint",
+      "arco-scripts test:client --bail --findRelatedTests --passWithNoTests --coverage",
+      "arco-scripts test:node --bail --findRelatedTests --passWithNoTests",
+      "git add"
+    ]
+  },
+  "sideEffects": [
+    "dist/**/*"
+  ],
+  "license": "MIT",
+  "_files": [
+    "es",
+    "lib",
+    "dist",
+    "docs"
+  ]
+}

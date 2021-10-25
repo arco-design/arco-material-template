@@ -1,0 +1,12 @@
+{
+  "name": "@arco-design/arco-template-react-library",
+  "version": "0.21.8",
+  "description": "A template for react component library based on ArcoDesign",
+  "author": "",
+  "files": [
+    "hook",
+    "template",
+    "template-for-monorepo"
+  ],
+  "license": "MIT"
+}

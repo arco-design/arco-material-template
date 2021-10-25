@@ -1,0 +1,14 @@
+{
+  "name": "@arco-design/arco-template-utils",
+  "version": "0.0.5",
+  "description": "",
+  "files": [
+    "hook",
+    "template",
+    "template-for-monorepo"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@arco-design/arco-dev-utils": "^1.6.0"
+  }
+}

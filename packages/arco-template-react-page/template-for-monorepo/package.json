@@ -1,0 +1,38 @@
+{
+  "name": "@CONST_PACKAGE_NAME@",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./es/index.d.ts",
+  "scripts": {
+    "dev": "arco-scripts dev:component",
+    "build": "yarn clean && arco-scripts build:component",
+    "docgen": "rm -rf docs && mkdir docs && cp src/README.md docs/",
+    "test:client": "arco-scripts build:component:cjs && arco-scripts test:client",
+    "test:node": "arco-scripts build:component:cjs && arco-scripts test:node",
+    "test": "arco-scripts build:component:cjs && NODE_ENV=test arco-scripts test",
+    "show:config": "arco-scripts show:config",
+    "clean": "rm -rf es && rm -rf lib && rm -rf dist",
+    "prepublishOnly": "yarn build && yarn docgen",
+    "generate": "arco generate --from-current-package",
+    "sync": "arco sync --from-current-package"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": "^16.0.1"
+  },
+  "sideEffects": [
+    "dist/**/*",
+    "{es,lib,src}/**/style/*",
+    "*.less"
+  ],
+  "license": "MIT",
+  "_files": [
+    "src",
+    "es",
+    "lib",
+    "dist",
+    "docs"
+  ]
+}

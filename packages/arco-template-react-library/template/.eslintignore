@@ -1,0 +1,4 @@
+stories/**/*.jsx
+scripts/template/**/*
+site/src/*.js
+*.json

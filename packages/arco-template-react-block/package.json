@@ -1,0 +1,13 @@
+{
+  "name": "@arco-design/arco-template-react-block",
+  "version": "0.16.9",
+  "description": "A template for react block based on ArcoDesign",
+  "keywords": [],
+  "author": "",
+  "files": [
+    "hook",
+    "template",
+    "template-for-monorepo"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,5 @@
+icon/index.js
+icon/index.es.js
+icon/demo.js
+stories/**/*.jsx
+*.json

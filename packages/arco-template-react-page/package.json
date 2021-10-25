@@ -1,0 +1,13 @@
+{
+  "name": "@arco-design/arco-template-react-page",
+  "version": "0.5.8",
+  "description": "A template for react page based on ArcoDesign",
+  "keywords": [],
+  "author": "",
+  "files": [
+    "hook",
+    "template",
+    "template-for-monorepo"
+  ],
+  "license": "MIT"
+}

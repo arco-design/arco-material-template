@@ -1,0 +1,16 @@
+{
+  "name": "@CONST_PACKAGE_NAME@",
+  "version": "0.0.1",
+  "description": "Project for Arco Material Team Site",
+  "scripts": {
+    "build": "arco-doc-site build",
+    "preview": "arco preview --teamSite --path \"/dist&arcoVersion=latest\""
+  },
+  "devDependencies": {
+    "@arco-design/arco-doc-site": "^1.0.0"
+  },
+  "_files": [
+    "dist"
+  ],
+  "license": "MIT"
+}

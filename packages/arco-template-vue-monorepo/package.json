@@ -1,0 +1,12 @@
+{
+  "name": "@arco-design/arco-template-vue-monorepo",
+  "version": "0.1.8",
+  "description": "A template for vue component based on ArcoDesign",
+  "keywords": [],
+  "author": "",
+  "files": [
+    "hook",
+    "template"
+  ],
+  "license": "MIT"
+}
