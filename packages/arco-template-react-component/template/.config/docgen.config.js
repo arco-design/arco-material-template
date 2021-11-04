@@ -3,4 +3,5 @@ module.exports = (config) => {
   // DON'T change output!!!
   config.output = 'docs/README.md';
   config.tsParseTool = ['ts-document'];
+  config.demoGlob = 'demo/index.js';
 };

@@ -3,4 +3,5 @@ module.exports = (config) => {
   config.template = 'README.md';
   // DON'T change output!!!
   config.output = 'docs/README.md';
+  config.demoGlob = 'demo/index.js';
 };
