@@ -12,7 +12,24 @@ module.exports = (config) => {
         : () => {};
     config = commonConfig(config) || config;
   }
+
+  const entry = {
+    arco: path.resolve('./src/index.tsx'),
+  };
+  const demoVendorPath = path.resolve('./src/demo/arcoDemoVendor.js');
+  if (fs.existsSync(demoVendorPath)) {
+    entry.arcoDemoVendor = demoVendorPath;
+  }
+
+  const output = {};
+  const { umd } = require(path.resolve('package.json'));
+  if (umd) {
+    output.filename = path.basename(umd.file);
+    output.library = umd.module;
+  }
+
   return merge(config, {
-    entry: path.resolve(__dirname, '../src/index.tsx'),
+    entry,
+    output,
   });
 };

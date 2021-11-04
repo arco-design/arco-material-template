@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 const merge = require('webpack-merge');
 const { webpack } = require('../../../arco.scripts.config');
@@ -15,13 +14,22 @@ module.exports = (config) => {
   }
 
   const entry = {
-    arco: path.resolve(__dirname, '../src/index.tsx'),
+    arco: path.resolve('./src/index.tsx'),
   };
-
-  const demoVendorPath = path.resolve(__dirname, '../src/demo/arcoDemoVendor.js');
+  const demoVendorPath = path.resolve('./src/demo/arcoDemoVendor.js');
   if (fs.existsSync(demoVendorPath)) {
     entry.arcoDemoVendor = demoVendorPath;
   }
 
-  return merge(config, { entry });
+  const output = {};
+  const { umd } = require(path.resolve('package.json'));
+  if (umd) {
+    output.filename = path.basename(umd.file);
+    output.library = umd.module;
+  }
+
+  return merge(config, {
+    entry,
+    output,
+  });
 };

@@ -5,6 +5,10 @@
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "types": "./es/index.d.ts",
+  "umd": {
+    "file": "./dist/index.min.js",
+    "module": "arcoMaterial"
+  },
   "scripts": {
     "dev": "arco-scripts dev:component",
     "build": "arco-scripts build:component",
