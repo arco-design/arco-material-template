@@ -9,7 +9,7 @@ export interface TooltipButtonProps {
   children?: any;
   /**
    * @zh 按钮的标题
-   * @default `Hello Arco`
+   * @defaultValue `Hello Arco`
    * @version 1.0.0
    */
   title?: ReactNode;
