@@ -7,7 +7,8 @@
   "types": "./es/index.d.ts",
   "umd": {
     "file": "./dist/index.min.js",
-    "module": "arcoMaterial"
+    "module": "arcoMaterial",
+    "style": "./dist/css/index.css"
   },
   "scripts": {
     "dev": "arco-scripts dev:component",

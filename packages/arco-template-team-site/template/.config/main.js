@@ -36,5 +36,10 @@ module.exports = {
     larkGroupID: '',
     // 是否允许切换站点主题
     allowThemeToggle: false,
+    // 物料 Demo 配置
+    demo: {
+      // 是否允许实时编辑调试
+      editable: true,
+    }
   },
 };
