@@ -3,6 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const merge = require('webpack-merge');
 
+/**
+ * @param config {import('@arco-design/arco-scripts').WebpackConfig}
+ */
 module.exports = (config) => {
   const entry = {
     arco: path.resolve('./src/index.tsx'),

@@ -1,4 +1,6 @@
-// 自定义 Jest 配置
+/**
+ * @param config {import('@arco-design/arco-scripts').JestConfig}
+ */
 exports.node = (config) => {
   config.moduleNameMapper = {
     '^@CONST_PACKAGE_NAME@/(.+)$': '<rootDir>/$1',
@@ -6,6 +8,9 @@ exports.node = (config) => {
   };
 };
 
+/**
+ * @param config {import('@arco-design/arco-scripts').JestConfig}
+ */
 exports.client = (config) => {
   config.moduleNameMapper = {
     '^@CONST_PACKAGE_NAME@/(.+)$': '<rootDir>/$1',

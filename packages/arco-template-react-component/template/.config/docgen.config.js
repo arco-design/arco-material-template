@@ -1,3 +1,6 @@
+/**
+ * @param config {import('@arco-design/arco-scripts').DocgenConfig}
+ */
 module.exports = (config) => {
   config.entry = 'src';
   // DON'T change output!!!

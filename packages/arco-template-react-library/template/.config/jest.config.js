@@ -1,4 +1,6 @@
-// 自定义 Jest 配置
+/**
+ * @param config {import('@arco-design/arco-scripts').JestConfig}
+ */
 exports.node = (config) => {
   config.testPathIgnorePatterns = ['/node_modules/', '/scripts/'];
   config.moduleNameMapper = {
@@ -7,6 +9,9 @@ exports.node = (config) => {
   };
 };
 
+/**
+ * @param config {import('@arco-design/arco-scripts').JestConfig}
+ */
 exports.client = (config) => {
   config.testPathIgnorePatterns = ['/node_modules/', '/scripts/'];
   config.collectCoverageFrom = ['components/**/*.{ts,tsx}', '!components/**/style/*'];

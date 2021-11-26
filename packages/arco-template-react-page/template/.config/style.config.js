@@ -1,5 +1,8 @@
 const path = require('path');
 
+/**
+ * @param config {import('@arco-design/arco-scripts').StyleConfig}
+ */
 module.exports = (config) => {
   const { umd } = require(path.resolve('package.json'));
   if (umd && umd.style) {

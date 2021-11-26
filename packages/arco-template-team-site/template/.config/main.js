@@ -1,5 +1,7 @@
+/**
+ * @type {import('@arco-design/arco-doc-site').MainConfig}
+ */
 module.exports = {
-  // 构建配置
   build: {
     // 匹配文档和组件的路径
     globs: {

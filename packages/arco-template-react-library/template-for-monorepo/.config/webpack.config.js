@@ -3,6 +3,9 @@ const path = require('path');
 const merge = require('webpack-merge');
 const { webpack } = require('../../../arco.scripts.config');
 
+/**
+ * @param config {import('@arco-design/arco-scripts').WebpackConfig}
+ */
 module.exports = (config) => {
   if (webpack) {
     const commonConfig =
