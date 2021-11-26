@@ -1,6 +1,9 @@
 const path = require('path');
 const { style } = require('../../../arco.scripts.config');
 
+/**
+ * @param config {import('@arco-design/arco-scripts').StyleConfig}
+ */
 module.exports = (config) => {
   if (style) {
     config = style(config) || config;
