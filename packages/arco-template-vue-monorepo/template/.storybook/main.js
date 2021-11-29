@@ -35,7 +35,7 @@ module.exports = {
     packagePaths.forEach((_path) => {
       const packageJson = fs.readJsonSync(path.resolve(_path, 'package.json'));
       const dirSourceFile =
-        packageJson.arcoMeta && packageJson.arcoMeta.type === 'react-library'
+        packageJson.arcoMeta && packageJson.arcoMeta.type === 'vue-library'
           ? 'components'
           : 'src';
       config.resolve.alias[`${packageJson.name}$`] = path.resolve(

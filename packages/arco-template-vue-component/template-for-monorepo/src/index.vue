@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Button, Tooltip } from '@CONST_ARCO_PACKAGE_NAME@';
+import { Button, Tooltip } from '@arco-design/web-vue';
 
 export default defineComponent({
   name: 'TooltipButton',
