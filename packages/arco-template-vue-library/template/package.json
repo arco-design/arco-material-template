@@ -1,6 +1,6 @@
 {
-  "name": "@CONST_PACKAGE_NAME@",
-  "version": "0.1.0",
+  "name": "test",
+  "version": "1.0.0",
   "description": "",
   "keywords": [
     "vue",
@@ -13,17 +13,17 @@
   "types": "dist/index.d.ts",
   "umd": {
     "file": "dist/index.min.js",
-    "style": "dist/css/index.css",
-    "module": "ArcoMaterial"
+    "module": "ArcoComponents"
   },
-  "buildInput": "src/index.vue",
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "build": "arco-vue-scripts build:material 'src/index.vue' & npm run dtsgen",
-    "docgen": "arco-vue-scripts docgen -i 'src/TEMPLATE.md'",
-    "dtsgen": "arco-vue-scripts dtsgen 'src/*.{ts,tsx,vue}'",
+    "build": "npm run build:component && npm run build:style && npm run dtsgen",
+    "build:component": "arco-vue-scripts build:material-library",
+    "build:style": "arco-vue-scripts build:style",
+    "dtsgen": "arco-vue-scripts dtsgen 'components/**/*.{ts,tsx,vue}'",
+    "docgen": "arco-vue-scripts docgen",
     "test": "arco-vue-scripts test",
-    "clean": "rm -rf dist && rm -rf docs",
+    "add:component": "node ./scripts/add-component.js",
     "prepublishOnly": "npm run clean && npm run build && npm run docgen",
     "preview": "arco preview"
   },
@@ -47,6 +47,7 @@
     "vue": "^3.2.0"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.6",
     "@arco-design/arco-vue-scripts": "latest",
     "@arco-design/web-vue": "~2",
     "@babel/core": "^7.14.6",
@@ -66,6 +67,7 @@
     "@vue/test-utils": "^2.0.0-beta.14",
     "babel-loader": "^8.2.2",
     "eslint": "^7.21.0",
+    "fs-extra": "^9.1.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -77,13 +79,14 @@
     "less-loader": "^7.3.0",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
+    "fast-glob": "^3.2.7",
     "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
     "typescript": "^4.2.4",
-    "vue": "^3.1.0",
+    "vue": "^3.2.0",
     "vue-loader": "^16.2.0"
   },
   "_files": [
