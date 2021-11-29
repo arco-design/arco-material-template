@@ -1,6 +1,6 @@
 {
   "name": "@arco-design/arco-template-vue-library",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A template for vue component library based on ArcoDesign",
   "author": "",
   "files": [
@@ -10,4 +10,3 @@
   ],
   "license": "MIT"
 }
-
