@@ -13,6 +13,7 @@
   "types": "dist/index.d.ts",
   "umd": {
     "file": "dist/index.min.js",
+    "style": "dist/css/index.css",
     "module": "ArcoMaterial"
   },
   "_files": [
