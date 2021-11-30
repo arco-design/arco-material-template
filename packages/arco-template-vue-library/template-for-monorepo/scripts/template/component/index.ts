@@ -1,5 +1,5 @@
 import type { App } from 'vue';
-import _@CONST_COMPONENT_NAME@ from './index.vue';
+import _@CONST_COMPONENT_NAME@ from './component.vue';
 
 const @CONST_COMPONENT_NAME@ = Object.assign(_@CONST_COMPONENT_NAME@, {
   install: (app: App) => {
