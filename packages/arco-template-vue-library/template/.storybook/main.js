@@ -27,7 +27,7 @@ module.exports = {
   stories: ['../stories/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   webpackFinal: (config) => {
-    config.resolve.alias['test'] = path.resolve(__dirname, '../components');
+    config.resolve.alias['@CONST_PACKAGE_NAME@'] = path.resolve(__dirname, '../components');
 
     // less
     config.module.rules.push({
