@@ -1,1 +1,1 @@
-%%API(index.vue)%%
+%%API(component.vue)%%
