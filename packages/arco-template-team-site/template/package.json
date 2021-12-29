@@ -8,7 +8,7 @@
     "preview": "arco preview --teamSite --path \"/dist&arcoVersion=latest\""
   },
   "devDependencies": {
-    "@arco-design/arco-doc-site": "^1.0.0"
+    "@arco-design/arco-doc-site": "^1.7.0"
   },
   "_files": [
     "dist"
