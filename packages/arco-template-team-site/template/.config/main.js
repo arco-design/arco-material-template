@@ -10,14 +10,14 @@ module.exports = {
         base: '../*',
         doc: 'docs/README.md',
         demo: 'src/demo/index.js',
-        style: 'src/style/index.ts',
+        style: 'src/style/index.less',
       },
       // 可用于 Arco 物料库模板的配置
       // component: {
       //   base: '../components/*',
       //   doc: 'README.md',
       //   demo: 'demo/index.js',
-      //   style: 'style/index.ts',
+      //   style: 'style/index.less',
       // },
       // 可用于 Arco 工具库模板的配置
       // component: {
