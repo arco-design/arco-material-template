@@ -28,7 +28,8 @@ module.exports = (config) => {
   const output = {};
   const { umd } = require(path.resolve('package.json'));
   if (umd) {
-    output.filename = path.basename(umd.file);
+    output.filename = (chunkData) =>
+      chunkData.chunk.name === 'arco' ? path.basename(umd.file) : '[name].min.js';
     output.library = umd.module;
   }
 
