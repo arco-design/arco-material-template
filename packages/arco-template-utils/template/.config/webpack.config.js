@@ -3,25 +3,36 @@ const fs = require('fs');
 const path = require('path');
 const merge = require('webpack-merge');
 
+/**
+ * @param config {import('@arco-design/arco-scripts').WebpackConfig}
+ */
 module.exports = (config) => {
-  const entry = {
-    arco: path.resolve('./src/index.ts'),
-  };
+  // Clear default entries
+  config.entry = {};
+
+  // Get library info defined in package.json
+  const { umd = {} } = require(path.resolve('package.json'));
+  const entryChunkName = umd.module || 'arco';
+
+  // Rewrite webpack entries
+  config.entry[entryChunkName] = path.resolve('./src/index.ts');
   const demoVendorPath = path.resolve('./src/demo/arcoDemoVendor.js');
   if (fs.existsSync(demoVendorPath)) {
-    entry.arcoDemoVendor = demoVendorPath;
+    config.entry.arcoDemoVendor = demoVendorPath;
   }
 
-  const output = {};
-  const { umd } = require(path.resolve('package.json'));
-  if (umd) {
-    output.filename = (chunkData) =>
-      chunkData.chunk.name === 'arco' ? path.basename(umd.file) : '[name].min.js';
-    output.library = umd.module;
-  }
-
-  return merge(config, {
-    entry,
-    output,
+  const finalConfig = merge(config, {
+    output: {
+      filename: (chunkData) =>
+        umd.file && chunkData.chunk.name === entryChunkName
+          ? path.basename(umd.file)
+          : '[name].min.js',
+    },
   });
+
+  // Use code below to log final webpack config
+  // console.log(JSON.stringify(finalConfig, null, 2));
+  // process.exit(0);
+
+  return finalConfig;
 };
