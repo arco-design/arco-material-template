@@ -1,0 +1,11 @@
+{
+  "name": "@arco-materials/template-team-site",
+  "version": "1.0.1",
+  "description": "A template for Arco material team site",
+  "files": [
+    "hook",
+    "template"
+  ],
+  "author": "Arco Design Team",
+  "license": "MIT"
+}

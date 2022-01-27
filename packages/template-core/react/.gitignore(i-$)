@@ -16,6 +16,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+.coverage
 
 # nyc test coverage
 .nyc_output
@@ -61,11 +62,16 @@ typings/
 # next.js build output
 .next
 
+# JetBrain IDE
 .idea
+
+# typescript cache
+.rpt2_cache/
 
 **/.DS_Store
 
-package-lock.json
-
-example
-example-mono
+# dist things
+/es
+/lib
+/docs
+/dist

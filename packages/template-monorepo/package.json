@@ -1,0 +1,26 @@
+{
+  "name": "@arco-materials/template-monorepo",
+  "version": "1.0.0",
+  "description": "Create Arco Material Lerna Project",
+  "bin": {
+    "template": "scripts/bin.js"
+  },
+  "scripts": {
+    "eject:root": "node ./scripts/bin.js --framework=react --targetDir=../../example-mono",
+    "eject:package": "node ../template-core/scripts/bin.js my-demo --framework=react --type=component --targetDir=../../example-mono/packages/my-demo"
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.0",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-rename": "^2.0.0"
+  },
+  "files": [
+    ".arco-cli",
+    "scripts",
+    "react",
+    "vue"
+  ],
+  "author": "Arco Design Team",
+  "license": "MIT"
+}

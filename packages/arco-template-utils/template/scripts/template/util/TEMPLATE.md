@@ -1,7 +1,0 @@
----
-file: index
----
-
-## Demos
-
-%%Demos%%
