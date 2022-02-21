@@ -1,5 +1,7 @@
 # Arco 物料 Monorepo
 
+[物料平台文档中心](https://arco.design/docs/material/guide)
+
 **此项目依赖 `yarn` 和 `lerna`，请确保你已全局安装这两个包。**
 
 ## 准备工作
@@ -51,5 +53,3 @@ yarn build
 // 构建单个包
 lerna run build --stream --scope packageName
 ```
-
-[查看完整帮助文档](https://arco.design/cli)
