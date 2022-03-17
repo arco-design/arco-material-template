@@ -1,6 +1,6 @@
 {
   "name": "@arco-materials/template-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create Arco Material Project",
   "bin": {
     "template": "scripts/bin.js"
