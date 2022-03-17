@@ -10,7 +10,9 @@ module.exports = {
     const rootConfigPath = path.resolve(getGitRootPath(), 'arco.scripts.config.js');
     if (fs.existsSync(rootConfigPath)) {
       const { jest } = require(rootConfigPath);
-      config = jest(config) || config;
+      if (jest && jest.node) {
+        config = jest.node(config) || config;
+      }
     }
 
     config.testPathIgnorePatterns = ['/node_modules/', '/scripts/'];
@@ -26,7 +28,9 @@ module.exports = {
     const rootConfigPath = path.resolve(getGitRootPath(), 'arco.scripts.config.js');
     if (fs.existsSync(rootConfigPath)) {
       const { jest } = require(rootConfigPath);
-      config = jest(config) || config;
+      if (jest && jest.client) {
+        config = jest.client(config) || config;
+      }
     }
 
     config.testPathIgnorePatterns = ['/node_modules/', '/scripts/'];
