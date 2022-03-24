@@ -14,6 +14,7 @@ const SHORTHAND_MAP_MATERIAL_TYPE = {
   page: 'p',
   component: 'c',
   library: 'l',
+  utils: 'u',
 };
 
 // RegExp to match suffix like $-bpc, $ means all

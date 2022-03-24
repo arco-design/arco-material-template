@@ -1,0 +1,51 @@
+{
+  "name": "@CONST_PACKAGE_NAME@",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./es/index.d.ts",
+  "umd": {
+    "file": "./dist/index.min.js",
+    "module": "arcoMaterial"
+  },
+  "scripts": {
+    "dev": "arco-scripts dev:component",
+    "build": "arco-scripts build:component",
+    "docgen": "arco-scripts docgen",
+    "test": "NODE_ENV=test arco-scripts test:client",
+    "add:util": "node ./scripts/addUtil.js",
+    "show:config": "arco-scripts show:config",
+    "clean": "rm -rf es lib dist",
+    "prepublishOnly": "npm run clean && npm run build && npm run docgen",
+    "generate": "arco generate --from-current-package",
+    "sync": "arco sync --from-current-package"
+  },
+  "devDependencies": {
+    "arco-cli-dev-utils": "^1.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run eslint",
+      "arco-scripts test:client --bail --findRelatedTests --passWithNoTests --coverage",
+      "git add"
+    ]
+  },
+  "sideEffects": [
+    "dist/**/*"
+  ],
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
+  "arcoMeta": {
+    "type": "utils"
+  },
+  "license": "MIT"
+}

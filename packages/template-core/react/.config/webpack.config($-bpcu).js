@@ -28,7 +28,7 @@ module.exports = (config) => {
   const entryChunkName = umd.module || 'arco';
 
   // Rewrite webpack entries
-  config.entry[entryChunkName] = path.resolve('./src/index.tsx');
+  config.entry[entryChunkName] = path.resolve('./src/index');
   const demoVendorPath = path.resolve('./src/demo/arcoDemoVendor.js');
   if (fs.existsSync(demoVendorPath)) {
     config.entry.arcoDemoVendor = demoVendorPath;

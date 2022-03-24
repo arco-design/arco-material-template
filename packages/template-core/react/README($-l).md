@@ -27,7 +27,7 @@ arco sync
 
 ## 提供 Demo
 
-Demo 目录位于 `components/*/demo`。在 `src/demo/index.js` 中，通过 JSDoc 的语法提供物料及各个 Demo 的相关信息。
+Demo 目录位于 `components/*/demo`。在 `demo/index.js` 中，通过 JSDoc 的语法提供物料及各个 Demo 的相关信息。
 
 ```javascript
 // src/demo/index.js
