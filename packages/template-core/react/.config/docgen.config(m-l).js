@@ -1,5 +1,7 @@
 const path = require('path');
 const fs = require('fs');
+const { getGitRootPath } = require('arco-cli-dev-utils');
+
 /**
  * @param config {import('arco-scripts').DocgenConfig}
  */
