@@ -41,7 +41,7 @@ module.exports = {
     // 物料 Demo 配置
     demo: {
       // 是否允许实时编辑调试
-      editable: true,
+      editable: false,
     }
   },
 };
