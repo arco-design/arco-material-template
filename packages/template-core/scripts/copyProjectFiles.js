@@ -61,7 +61,7 @@ module.exports = function copyProjectFiles({
           const relativePath = path.relative(sourcePath, filePath);
           const suffixMatches = relativePath
             .replace(path.extname(filePath), '')
-            .split('/')
+            .split(path.sep)
             .pop()
             .match(REGEXP_SUFFIX);
 
