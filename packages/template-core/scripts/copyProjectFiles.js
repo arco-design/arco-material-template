@@ -97,9 +97,9 @@ module.exports = function copyProjectFiles({
             extname,
             basename: basename === 'gitignore' ? '.gitignore' : basename.replace(REGEXP_SUFFIX, ''),
             dirname: dirname
-              .split('/')
+              .split(path.sep)
               .map((item) => item.replace(REGEXP_SUFFIX, ''))
-              .join('/'),
+              .join(path.sep),
           };
         })
       )
