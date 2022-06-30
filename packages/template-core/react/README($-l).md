@@ -4,6 +4,8 @@
 
 ## 快速开始
 
+**在 `npm run dev` 前，请运行 `npm run add:component -- ComponentName` 创建第一个组件，否则 dev 将会因缺少 Story 入口而报错。**
+
 ```
 # 添加组件
 npm run add:component -- YourComponentName

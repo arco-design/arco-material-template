@@ -29,6 +29,7 @@ function getLoaderForStyle(cssOptions) {
 }
 
 module.exports = {
+  core: { builder: 'webpack5' },
   stories: ['../stories/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   webpackFinal: (config) => {
