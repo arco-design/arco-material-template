@@ -1,6 +1,6 @@
 {
   "name": "@arco-materials/template-monorepo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create Arco Material Lerna Project",
   "bin": {
     "template": "scripts/bin.js"
