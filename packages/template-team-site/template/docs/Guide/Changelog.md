@@ -1,12 +1,8 @@
 ---
 changelog: true
+title: Change Log
+description: View detailed release records here.
 ---
-
-`````
-# Change Log
-
-View detailed release records here.
-`````
 
 ## 1.0.0
 

@@ -1,10 +1,8 @@
-`````
-Developer Guide
-
-# Quick Start
-
-Follow the steps below to quickly get started using this library.
-`````
+---
+group: Developer Guide
+title: Quick Start
+description: Follow the steps below to quickly get started using this library.
+---
 
 ## React Version
 

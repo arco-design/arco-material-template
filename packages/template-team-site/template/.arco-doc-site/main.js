@@ -4,6 +4,7 @@
 module.exports = {
   build: {
     // 匹配文档和组件的路径
+    // 相对路径为相对于站点根目录的路径，也可填写绝对路径
     globs: {
       // 可用于 Arco Monorepo 模板的配置
       component: {
