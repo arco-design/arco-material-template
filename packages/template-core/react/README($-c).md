@@ -78,7 +78,7 @@ interface ButtonProps {
 file: index,interface (可以指定多个文档提取的入口文件，使用逗号隔开)
 ---
 
-# TooltipButton
+# @CONST_COMPONENT_NAME_FROM_PACKAGE@
 
 ## 属性/Props
 

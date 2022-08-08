@@ -1,11 +1,10 @@
 import React, { ReactNode } from 'react';
-import { Button, Tooltip } from '@arco-design/web-react';
-import { ButtonProps } from '@arco-design/web-react/es/Button';
+import { Button, Tooltip, ButtonProps } from '@arco-design/web-react';
 
 /**
- * @title TooltipButton
+ * @title @CONST_COMPONENT_NAME_FROM_PACKAGE@
  */
-export interface TooltipButtonProps {
+export interface @CONST_COMPONENT_NAME_FROM_PACKAGE@Props {
   children?: any;
   /**
    * @zh 按钮的标题
@@ -19,7 +18,7 @@ export interface TooltipButtonProps {
   btnProps?: ButtonProps;
 }
 
-const TooltipButton = (props: TooltipButtonProps) => {
+const @CONST_COMPONENT_NAME_FROM_PACKAGE@ = (props: @CONST_COMPONENT_NAME_FROM_PACKAGE@Props) => {
   const { children, title = 'Hello Arco', btnProps } = props;
   return (
     <div className="arco-rc-tooltip-button">
@@ -34,4 +33,4 @@ const TooltipButton = (props: TooltipButtonProps) => {
   );
 };
 
-export default TooltipButton;
+export default @CONST_COMPONENT_NAME_FROM_PACKAGE@;

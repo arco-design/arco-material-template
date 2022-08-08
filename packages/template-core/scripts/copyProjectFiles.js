@@ -22,6 +22,7 @@ const REGEXP_SUFFIX = /\(((?:\$|\w+)-(?:\$|\w+))\)$/;
 
 const DEFAULT_PACKAGE_NAME = 'my-first-material';
 const PLACEHOLDER_PACKAGE_NAME = '@CONST_PACKAGE_NAME@';
+const PLACEHOLDER_COMPONENT_NAME_FROM_PACKAGE = '@CONST_COMPONENT_NAME_FROM_PACKAGE@';
 
 /**
  * Copy Arco Material project files to a specify directory
@@ -86,6 +87,11 @@ module.exports = function copyProjectFiles({
           switch (str) {
             case PLACEHOLDER_PACKAGE_NAME:
               return packageName;
+            case PLACEHOLDER_COMPONENT_NAME_FROM_PACKAGE:
+              return packageName
+                .split('/')
+                .pop()
+                .replace(/-(\w|\B)/g, (_, $1) => $1.toUpperCase());
             default:
               return str;
           }
