@@ -91,7 +91,7 @@ module.exports = function copyProjectFiles({
               return packageName
                 .split('/')
                 .pop()
-                .replace(/-(\w|\B)/g, (_, $1) => $1.toUpperCase());
+                .replace(/(?:^|-)(\w|\B)/g, (_, $1) => $1.toUpperCase());
             default:
               return str;
           }
