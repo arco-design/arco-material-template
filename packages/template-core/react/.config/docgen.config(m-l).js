@@ -12,5 +12,6 @@ module.exports = (config) => {
     config = docgen(config) || config;
   }
   config.entry = 'components/*';
+  config.output = '';
   config.outputFileName = 'README.md';
 };
