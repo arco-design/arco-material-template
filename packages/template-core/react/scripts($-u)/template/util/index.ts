@@ -2,7 +2,7 @@
  * @title My function
  * @returns Result of this function
  */
-export default function @CONST_UTIL_NAME@()(
+export default function @CONST_UTIL_NAME@(
   /**
    * @zh First number
    */
