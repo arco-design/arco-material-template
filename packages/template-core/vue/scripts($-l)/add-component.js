@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const fg = require('fast-glob');
+const os = require('os');
 
 const componentName = process.argv[2];
 const templatePath = path.resolve(__dirname, 'template');
@@ -18,6 +19,8 @@ if (fs.pathExistsSync(targetComponentPath)) {
 }
 
 const replaceContent = async (pattern, searchValue, replaceValue) => {
+  if (os.platform() === 'win32') pattern = pattern.replace(/\\/g, '/');
+
   const files = await fg(pattern);
   const regExp = new RegExp(searchValue, 'g');
 
